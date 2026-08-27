@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minhas tarefas | Aceleradora Inclusiva</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="cabecalho">
+        <p class="etiqueta">Aceleradora Inclusiva</p>
+        <h1 id="titulo">Minhas tarefas</h1>
+        <p class="descricao">
+          Organize seus estudos e acompanhe o que precisa ser feito.
+        </p>
+      </header>
+
+      <section class="painel-tarefas" aria-labelledby="titulo-tarefas">
+        <div class="painel-cabecalho">
+          <h2 id="titulo-tarefas">Lista de tarefas</h2>
+          <span id="contador" class="contador">0 tarefas</span>
+        </div>
+
+        <ul id="lista-tarefas" class="lista-tarefas"></ul>
+      </section>
+    </main>
+  </body>
+</html>

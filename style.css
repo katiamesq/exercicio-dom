@@ -1,0 +1,200 @@
+:root {
+  --roxo: #5b3cc4;
+  --roxo-escuro: #352078;
+  --lilas: #eee9ff;
+  --laranja: #f28c28;
+  --creme: #fffaf2;
+  --texto: #292238;
+  --texto-suave: #6d6780;
+  --borda: #ded8ed;
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+  background: var(--creme);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 48px 16px;
+  background: linear-gradient(135deg, var(--creme) 0%, #f4efff 100%);
+}
+
+.container {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgb(53 32 120 / 12%);
+}
+
+.cabecalho {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.etiqueta {
+  margin: 0 0 12px;
+  color: var(--laranja);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: var(--roxo-escuro);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  margin-bottom: 0;
+  color: var(--roxo-escuro);
+  font-size: 1.25rem;
+}
+
+.descricao {
+  max-width: 540px;
+  margin-bottom: 0;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+.painel-tarefas {
+  margin-top: 28px;
+}
+
+.painel-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.contador {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--lilas);
+  color: var(--roxo);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.lista-tarefas {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tarefa {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--borda);
+  border-left: 5px solid var(--roxo);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.tarefa-concluida {
+  border-left-color: var(--laranja);
+  background: #fff8ed;
+}
+
+.tarefa-concluida .tarefa-titulo {
+  color: var(--texto-suave);
+  text-decoration: line-through;
+}
+
+.tarefa-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--roxo);
+}
+
+.tarefa-conteudo {
+  min-width: 0;
+}
+
+.tarefa-titulo {
+  margin: 0 0 5px;
+  font-size: 1rem;
+}
+
+.tarefa-descricao {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tarefa-prioridade {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--lilas);
+  color: var(--roxo);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.prioridade-alta {
+  background: #ffead8;
+  color: #a44e00;
+}
+
+.prioridade-baixa {
+  background: #e6f7ee;
+  color: #17663b;
+}
+
+.acoes-tarefa {
+  display: flex;
+  gap: 6px;
+}
+
+.botao {
+  padding: 8px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 7px;
+  background: #ffffff;
+  color: var(--roxo);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: default;
+}
+
+.botao:hover {
+  background: var(--lilas);
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 26px 18px;
+  }
+
+  .tarefa {
+    grid-template-columns: auto 1fr;
+  }
+}
