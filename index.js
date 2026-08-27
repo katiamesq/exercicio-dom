@@ -23,4 +23,32 @@ const tarefas = [
 ];
 
 // <------- seu código aqui ---->
+const listaTarefas = document.querySelector("#lista-tarefas");
+
+tarefas.forEach((tarefa) => {
+   const item = document.createElement("li"); 
+
+   item.classList.add("tarefa");
+
+   if (tarefa.concluida === true) {
+    item.classList.add ("tarefa-concluida");
+    
+   }
+item.setAttribute("data-id", tarefa.id);
+
+let status;
+
+    if (tarefa.concluida === true) {
+        status = "concluida";
+    } else {
+        status = "não concluida";
+    }
+
+    item.setAttribute("data-status", status);
+
+    const checkbox = document.createElement("input");
+
+});
+
+
 

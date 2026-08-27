@@ -1,5 +1,9 @@
 # Exercício: Lista de tarefas com DOM
 
+
+## Importante
+
+Neste exercício, não vamos usar eventos. Os botões `Editar` e `Remover` devem apenas aparecer na tela. Eles serão utilizados no próximo exercício, quando vamos aprender a criar, editar e remover tarefas a partir de ações da pessoa usuária.
 Neste exercício, você vai usar JavaScript para transformar os dados de um array em elementos HTML. A base da página e os estilos já estão prontos. Sua tarefa é construir a lista de forma dinâmica, sem escrever os itens diretamente no HTML.
 
 ## Contexto
@@ -63,10 +67,6 @@ Cada objeto deve gerar uma estrutura parecida com esta:
 - Inserir os elementos na ordem correta dentro do item.
 - Inserir cada item dentro da lista com `appendChild()` ou `append()`.
 - Atualizar o contador com a quantidade de objetos do array.
-
-## Importante
-
-Neste exercício, não vamos usar eventos. Os botões `Editar` e `Remover` devem apenas aparecer na tela. Eles serão utilizados no próximo exercício, quando vamos aprender a criar, editar e remover tarefas a partir de ações da pessoa usuária.
 
 Não altere a estrutura principal do `index.html` nem escreva as tarefas diretamente nele.
 
