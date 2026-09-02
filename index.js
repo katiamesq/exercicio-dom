@@ -81,20 +81,54 @@ let status;
 
       tarefaPrioridade.classList.add("tarefa-prioridade");
 
-      
+      tarefaPrioridade.classList.add("prioridade-" + tarefa.prioridade);
 
+      tarefaPrioridade.innerText = tarefa.prioridade;
 
+      const acoesTarefa = document.createElement("div");
 
+      acoesTarefa.classList.add("acoes-tarefa");
 
+      const botaoEditar = document.createElement("button");
 
+      botaoEditar.classList.add("botao", "botao-editar");
 
+      botaoEditar.setAttribute("type", "button");
 
+      botaoEditar.setAttribute("data-acao", "editar");
 
+      botaoEditar.innerText = "Editar";
+
+      const botaoRemover = document.createElement("button");
+
+      botaoRemover.classList.add("botao", "botao-remover");
+
+      botaoRemover.setAttribute("type", "button");
+
+      botaoRemover.setAttribute("data-acao", "remover");
+
+      botaoRemover.innerText = "Remover";
+
+      acoesTarefa.appendChild(botaoEditar);
+
+      acoesTarefa.appendChild(botaoRemover);
+
+      item.appendChild(checkbox);
+
+       item.appendChild(tarefaConteudo);
+
+       item.appendChild(tarefaPrioridade);
+
+       item.appendChild(acoesTarefa);
+
+       listaTarefas.appendChild(item);
 
 }
-
-
 });
+
+const contador = document.querySelector("#contador");
+
+contador.innerText = tarefas.length + " tarefas";
 
 
 
